@@ -5,6 +5,11 @@ export async function getAllPlan() {
   return result.rows;
 }
 
+export async function getByID(reqID) {
+  const resultByID = await query(`SELECT * FROM hackaplanner WHERE id = $1;`, [reqID]);
+  return resultByID.rows;
+}
+
 export async function deleteByID(reqID) {
   const deleted = await query(`DELETE FROM hackaplanner WHERE id IN ($1)`, [
     reqID,
@@ -39,4 +44,9 @@ export async function postNewPlan(insertBody) {
     ]
   );
   return updated.rows;
+}
+
+export async function deleteAllPlan() {
+  const deleted = await query(`TRUNCATE TABLE hackaplanner RESTART IDENTITY CASCADE;`);
+  return deleted.rows;
 }
