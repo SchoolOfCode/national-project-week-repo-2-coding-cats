@@ -1,4 +1,4 @@
-import query from '../../connection.js';
+import { query } from '../../connection.js';
 
 const deletedDb = `TRUNCATE TABLE users RESTART IDENTITY CASCADE; `;
 

@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "node ./bin/www.js",
-    "dbCreateTable": "node -r dotenv/config ./db/scripts/users/createTable.js",
-    "dbDeleteTable": "node -r dotenv/config ./db/scripts/users/deleteTable.js",
-    "dbDropTable": "node -r dotenv/config ./db/scripts/users/dropTable.js",
+    "dbCreateTable": "node -r dotenv/config ./db/scripts/hackaplanner/createTable.js",
+    "dbDeleteTable": "node -r dotenv/config ./db/scripts/hackaplanner/deleteTable.js",
+    "dbDropTable": "node -r dotenv/config ./db/scripts/hackaplanner/dropTable.js",
+    "dbPopulateTable": "node -r dotenv/config ./db/scripts/hackaplanner/populateTable.js",
     "dev": "nodemon -r dotenv/config ./bin/www.js"
   },
   "dependencies": {
