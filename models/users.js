@@ -1,7 +1,7 @@
 import { query } from '../db/connection.js';
 
 export async function getAllPlan() {
-  const result = await query(`SELECT * FROM hackaplanner;`);
+  const result = await query(`SELECT * FROM hackaplanner ORDER BY id DESC;`);
   return result.rows;
 }
 
